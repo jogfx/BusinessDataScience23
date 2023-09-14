@@ -338,9 +338,9 @@ answers = [
 
 # Loop through questions and answers
 for i, question in enumerate(questions):
-    expander = col1.expander(question)
+    expander = col1.expander(f"Question {i + 1}: {question}", expanded=False)  # Initially closed
     with expander:
-        expander.write(answers[i])
+        st.write(answers[i])
 
 # Display the scatter plot in the second column
 col2.title("Scatter Plot")
